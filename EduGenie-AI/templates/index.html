@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduGenie AI</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="badge">AI LEARNING ASSISTANT</div>
+      <h1>EduGenie</h1>
+      <p>Ask a question, explain a concept, summarize text, generate a quiz, or create a learning path.</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <div class="form-group">
+          <label for="feature">Choose a feature</label>
+          <select id="feature">
+            <option value="qa">Q&A</option>
+            <option value="explain">Explain a concept</option>
+            <option value="quiz">Generate quiz</option>
+            <option value="summarize">Summarize text</option>
+            <option value="learn">Learning recommendations</option>
+          </select>
+        </div>
+
+        <div id="input-area">
+          <div class="form-group">
+            <label id="input-label" for="text-input">Question</label>
+            <textarea id="text-input" placeholder="Type your question here..."></textarea>
+          </div>
+        </div>
+
+        <div class="controls">
+          <div id="character-count">0 characters</div>
+          <button id="submit-btn">Generate</button>
+        </div>
+
+        <div id="status" class="status" aria-live="polite"></div>
+      </section>
+
+      <section class="card result" id="result-card">
+        <div class="empty-state" id="empty-state">Your AI response will appear here.</div>
+        <div id="result" class="answer" hidden></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

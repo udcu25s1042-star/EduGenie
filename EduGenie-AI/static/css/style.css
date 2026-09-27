@@ -1,0 +1,475 @@
+:root {
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: #182230;
+
+    background: #f5f7fb;
+
+    line-height: 1.6;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f7fb,
+            #eef3ff
+        );
+}
+
+
+.container {
+
+    width:
+        min(
+            1000px,
+            calc(100% - 32px)
+        );
+
+    margin: 0 auto;
+
+    padding:
+        50px 0 30px;
+}
+
+
+/* --------------------------------
+   HERO
+-------------------------------- */
+
+.hero {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    padding:
+        6px 12px;
+
+    border-radius: 30px;
+
+    background: #182230;
+
+    color: white;
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+
+.hero h1 {
+
+    margin:
+        15px 0 10px;
+
+    font-size:
+        clamp(
+            2.8rem,
+            7vw,
+            5rem
+        );
+
+    line-height: 1;
+
+}
+
+
+.hero p {
+
+    max-width: 700px;
+
+    margin:
+        0 auto;
+
+    color: #647084;
+
+    font-size: 1.05rem;
+}
+
+
+/* --------------------------------
+   CARD
+-------------------------------- */
+
+.card {
+
+    background: white;
+
+    border:
+        1px solid #e2e7ef;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 15px 45px
+        rgba(
+            20,
+            30,
+            50,
+            0.07
+        );
+
+    margin-bottom: 18px;
+}
+
+
+/* --------------------------------
+   FORM
+-------------------------------- */
+
+.form-group {
+
+    margin-bottom: 20px;
+}
+
+
+label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 750;
+
+    font-size: 0.95rem;
+}
+
+
+select,
+textarea {
+
+    width: 100%;
+
+    border:
+        1px solid #d5dce7;
+
+    border-radius: 12px;
+
+    padding: 13px 15px;
+
+    font: inherit;
+
+    color: inherit;
+
+    background: white;
+}
+
+
+textarea {
+
+    resize: vertical;
+
+    min-height: 190px;
+}
+
+
+select:focus,
+textarea:focus {
+
+    outline: none;
+
+    border-color: #386eff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            56,
+            110,
+            255,
+            0.12
+        );
+}
+
+
+/* --------------------------------
+   BUTTONS
+-------------------------------- */
+
+.controls {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+#character-count {
+
+    color: #7c8798;
+
+    font-size: 0.85rem;
+}
+
+
+button {
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding:
+        13px 22px;
+
+    background: #182230;
+
+    color: white;
+
+    font: inherit;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        opacity 0.15s ease;
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-1px);
+}
+
+
+button:disabled {
+
+    opacity: 0.55;
+
+    cursor: wait;
+
+    transform: none;
+}
+
+
+/* --------------------------------
+   STATUS
+-------------------------------- */
+
+.status {
+
+    min-height: 35px;
+
+    padding:
+        5px 4px;
+
+    color: #5e697a;
+}
+
+
+.status.error {
+
+    color: #a52a2a;
+}
+
+
+/* --------------------------------
+   RESULT
+-------------------------------- */
+
+.result {
+
+    min-height: 180px;
+}
+
+
+.empty-state {
+
+    padding:
+        60px 20px;
+
+    text-align: center;
+
+    color: #8a94a4;
+}
+
+
+.answer {
+
+    white-space: pre-wrap;
+
+    line-height: 1.75;
+}
+
+
+/* --------------------------------
+   QUIZ
+-------------------------------- */
+
+.quiz-question {
+
+    padding: 18px;
+
+    border:
+        1px solid #e1e6ef;
+
+    border-radius: 14px;
+
+    margin-bottom: 15px;
+}
+
+
+.quiz-question h3 {
+
+    margin:
+        0 0 15px;
+
+    font-size: 1rem;
+}
+
+
+.option {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 9px 0;
+
+    cursor: pointer;
+
+    font-weight: 500;
+}
+
+
+.option input {
+
+    margin-top: 6px;
+}
+
+
+.feedback {
+
+    margin-top: 12px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: #f3f6fb;
+
+    white-space: pre-wrap;
+}
+
+
+.score {
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+
+/* --------------------------------
+   UTILITY
+-------------------------------- */
+
+.hidden {
+
+    display: none;
+}
+
+
+/* --------------------------------
+   FOOTER
+-------------------------------- */
+
+footer {
+
+    text-align: center;
+
+    color: #8a94a4;
+
+    font-size: 0.82rem;
+
+    padding: 20px;
+}
+
+
+footer span {
+
+    padding:
+        0 4px;
+}
+
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
+
+@media (max-width: 650px) {
+
+    .container {
+
+        width:
+            calc(100% - 20px);
+
+        padding-top: 30px;
+    }
+
+
+    .card {
+
+        padding: 18px;
+
+        border-radius: 16px;
+    }
+
+
+    .controls {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    button {
+
+        width: 100%;
+    }
+
+
+    .hero h1 {
+
+        font-size: 3rem;
+    }
+
+}
